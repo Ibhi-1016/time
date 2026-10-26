@@ -147,7 +147,7 @@ def get_time_for_place(place_name):
 
     lines = [
         f"╔══════════════════════════════════════════════╗",
-        f"║  🌍  World Clock                             ║",
+        f"║  World Clock                                 ║",
         f"╠══════════════════════════════════════════════╣",
         f"║  Place    : {place_name.title():<33}║",
         f"║  Timezone : {info['tz']} ({info['full']})",
@@ -171,7 +171,7 @@ def list_all_places():
             places.append(label)
     places.sort()
 
-    print("\n📋  Supported Places & Timezones\n" + "─" * 45)
+    print("\nSupported Places & Timezones\n" + "-" * 45)
     for p in places:
         print(f"   • {p}")
     print(f"\n   Total: {len(places)} entries\n")
@@ -179,23 +179,23 @@ def list_all_places():
 
 def interactive_mode():
     """Run the program in interactive (loop) mode."""
-    print("\n🌐  World Clock — Interactive Mode")
-    print("─" * 45)
+    print("\nWorld Clock - Interactive Mode")
+    print("-" * 45)
     print("Type a city or country name to get the current time.")
     print("Type 'list' to see all supported places.")
     print("Type 'quit' or 'exit' to leave.\n")
 
     while True:
         try:
-            place = input("🔎  Enter a place: ").strip()
+            place = input("Enter a place: ").strip()
         except (EOFError, KeyboardInterrupt):
-            print("\nGoodbye! 👋")
+            print("\nGoodbye!")
             break
 
         if not place:
             continue
         if place.lower() in ("quit", "exit", "q"):
-            print("Goodbye! 👋")
+            print("Goodbye!")
             break
         if place.lower() == "list":
             list_all_places()
@@ -205,7 +205,7 @@ def interactive_mode():
         if result:
             print(f"\n{result}\n")
         else:
-            print(f"\n❌  '{place}' not found. Type 'list' to see supported places.\n")
+            print(f"\n'{place}' not found. Type 'list' to see supported places.\n")
 
 
 def main():
@@ -228,7 +228,7 @@ def main():
     if result:
         print(f"\n{result}\n")
     else:
-        print(f"\n❌  '{place}' not found.")
+        print(f"\n'{place}' not found.")
         print("Use --list to see all supported places.\n")
         sys.exit(1)
 

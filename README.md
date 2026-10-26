@@ -1,4 +1,4 @@
-# 🌍 World Clock — Python
+# World Clock - Python
 
 A simple Python program to get the **current time** from any place in the world.
 
@@ -33,7 +33,7 @@ python world_clock.py --list
 
 ```
 ╔══════════════════════════════════════════════╗
-║  🌍  World Clock                             ║
+║  World Clock                                 ║
 ╠══════════════════════════════════════════════╣
 ║  Place    : New York                         ║
 ║  Timezone : EST (Eastern Standard Time)
